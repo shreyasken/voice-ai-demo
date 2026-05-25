@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice AI Demo — ElevenLabs vs OpenAI TTS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Voice AI Demo</h1>
+      <p class="subtitle">Compare ElevenLabs and OpenAI TTS side-by-side</p>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <label for="text-input">Text to synthesize</label>
+        <textarea
+          id="text-input"
+          rows="5"
+          maxlength="5000"
+          placeholder="Enter text here — try a sentence from an audiobook, a product description, or a voice assistant prompt..."
+        ></textarea>
+        <div class="char-count"><span id="char-count">0</span> / 5000</div>
+      </section>
+
+      <section class="providers">
+        <!-- ElevenLabs Card -->
+        <div class="provider-card" id="card-elevenlabs">
+          <div class="provider-header">
+            <div class="provider-label">
+              <span class="provider-dot elevenlabs"></span>
+              ElevenLabs
+            </div>
+            <select id="voice-elevenlabs" aria-label="ElevenLabs voice"></select>
+          </div>
+          <button class="btn generate-btn" data-provider="elevenlabs">
+            <span class="btn-text">Generate</span>
+            <span class="btn-spinner" hidden>Generating…</span>
+          </button>
+          <div class="audio-container" id="audio-elevenlabs" hidden>
+            <audio controls></audio>
+            <div class="latency-badge"></div>
+          </div>
+          <div class="error-msg" id="err-elevenlabs" hidden></div>
+        </div>
+
+        <div class="divider">vs</div>
+
+        <!-- OpenAI Card -->
+        <div class="provider-card" id="card-openai">
+          <div class="provider-header">
+            <div class="provider-label">
+              <span class="provider-dot openai"></span>
+              OpenAI TTS
+            </div>
+            <select id="voice-openai" aria-label="OpenAI voice"></select>
+          </div>
+          <button class="btn generate-btn" data-provider="openai">
+            <span class="btn-text">Generate</span>
+            <span class="btn-spinner" hidden>Generating…</span>
+          </button>
+          <div class="audio-container" id="audio-openai" hidden>
+            <audio controls></audio>
+            <div class="latency-badge"></div>
+          </div>
+          <div class="error-msg" id="err-openai" hidden></div>
+        </div>
+      </section>
+
+      <div class="compare-row">
+        <button class="btn btn-compare" id="compare-btn">
+          <span class="btn-text">Generate Both &amp; Compare</span>
+          <span class="btn-spinner" hidden>Generating…</span>
+        </button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
