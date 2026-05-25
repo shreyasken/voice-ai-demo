@@ -30,7 +30,7 @@ Built to explore the product and technical tradeoffs between ElevenLabs and Open
 ### 1. Clone and set up
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/voice-ai-demo.git
+git clone https://github.com/shreyasken/voice-ai-demo.git
 cd voice-ai-demo
 python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
