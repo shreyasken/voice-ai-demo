@@ -70,8 +70,13 @@ def synthesize():
     except ValueError as e:
         return jsonify({"error": str(e)}), 503
     except Exception as e:
-        return jsonify({"error": f"Synthesis failed: {str(e)}"}), 500
+        msg = str(e)
+        if "paid_plan_required" in msg or "payment_required" in msg:
+            return jsonify({"error": "ElevenLabs requires a paid plan for API access. Upgrade at elevenlabs.io/pricing or use the OpenAI side."}), 402
+        if "subscription_required" in msg or "model_deprecated" in msg:
+            return jsonify({"error": "ElevenLabs model unavailable on free tier. Upgrade at elevenlabs.io/pricing."}), 402
+        return jsonify({"error": f"Synthesis failed: {msg}"}), 500
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)

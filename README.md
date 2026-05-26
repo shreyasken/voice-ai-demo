@@ -56,7 +56,7 @@ Get your keys:
 python app.py
 ```
 
-Open [http://localhost:5000](http://localhost:5000).
+Open [http://localhost:5001](http://localhost:5001).
 
 ---
 
