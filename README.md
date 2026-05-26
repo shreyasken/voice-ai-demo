@@ -45,7 +45,7 @@ cp .env.example .env
 ```
 
 Get your keys:
-- ElevenLabs: [elevenlabs.io](https://elevenlabs.io) — free tier includes ~10k characters/month
+- ElevenLabs: [elevenlabs.io](https://elevenlabs.io) — Starter plan required ($5/month) for API access to library voices
 - OpenAI: [platform.openai.com](https://platform.openai.com) — TTS is billed per character (~$15/1M chars for `tts-1`)
 
 ### 3. Run
