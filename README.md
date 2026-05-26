@@ -81,7 +81,7 @@ voice-ai-demo/
 
 ### Why I built this
 
-I spent two years at Audible building and shipping an AI voice production platform — a product that let publishers and authors generate voice replicas and narrate content at scale without a recording studio. In that work, the most consequential early decision was **which TTS provider to build on**, and that decision wasn't just a technical benchmark. It involved evaluating latency, voice expressiveness, pricing curves, API reliability, and how each provider's roadmap would age alongside our own.
+I recently worked on an AI voice production product that lets narrators generate voice replicas and narrate content at scale without a recording studio. I got curious and started thinking about how do people outside Audible make decisions on **which TTS provider to build on**, and that question made me think of evaluating latency, voice expressiveness, pricing curves, API reliability, and how each provider's roadmap would age alongside our own.
 
 This demo is a working artifact of that reasoning process. Rather than reading API docs and forming opinions, I wanted something I could hand to a PM, an engineer, or a content creator and say: *here — listen to both, and tell me what you notice.*
 
@@ -103,7 +103,7 @@ If this were a product and not a demo, the next iteration would instrument every
 
 ### How this connects to my work
 
-This prototype reflects the same thinking I applied at Audible when scoping ML infrastructure decisions: **don't let the fastest API win by default; let the use case define the constraints, then pick the provider that fits inside them.** The $4B GMV authentication system I led at scale required the same discipline — picking primitives based on failure modes and growth curves, not just what was easiest to integrate today.
+This prototype reflects the same thinking I applied while making decisions for my products at Audible.
 
 ---
 
