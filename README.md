@@ -8,9 +8,7 @@ Built to explore the product and technical tradeoffs between ElevenLabs and Open
 
 ## Demo
 
-> **[Add a GIF or screenshot here once running]**
->
-> Suggested: record a short Loom or screen capture showing the comparison flow and embed it here. That alone will double the time recruiters spend on this repo.
+![Voice AI Demo — ElevenLabs vs OpenAI TTS side-by-side comparison](demo.gif)
 
 ---
 

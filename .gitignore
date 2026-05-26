@@ -29,3 +29,6 @@ ENV/
 *.mp3
 *.wav
 *.ogg
+
+# Demo GIF is intentionally tracked (demo.gif)
+
